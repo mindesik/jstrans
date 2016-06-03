@@ -1,0 +1,17 @@
+{
+    "name": "misterpaladin/jstrans",
+	"license": "ISC",
+	"description" : "Use Laravel translations in javascript",
+    "authors": [
+        {
+            "name": "Eugene Min",
+            "email": "e.min@milax.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MisterPaladin\\": "src/"
+        }
+    },
+    "require": {}
+}
