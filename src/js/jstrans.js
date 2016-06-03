@@ -5,8 +5,3 @@ var jstrans = function (key) {
         return null;
     }
 }
-
-
-
-
-
