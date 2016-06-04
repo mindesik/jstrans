@@ -22,26 +22,45 @@ Add `JSTransServiceProvider` to your `config/app.php`:
 ],
 ```
 
+Publish config:
+
+```
+$ php artisan vendor:publish --tag=jstrans
+```
+
 ## Usage
 
-Include code above your javascript code:
+Edit `config/jstrans.php`, add some translations to load:
+
+```php
+<?php
+
+return [
+    'validation',
+];
+```
+
+Include this blade directive in your blade template before your javascript files:
 
 ```html
-<script src="/js/jstrans.js" type="text/javascript"></script>
+@jstrans
 ```
 
-Make some translation or simple values in your blade view:
+And use it in your javascript like Laravel's `trans()` function:
+
+```javascript
+var foo = jstrans('validation'); // The value will be 'bar'
+```
+
+Additional you can specify multiple custom values and overwrite localization files:
 
 ```
+@jstrans([
+    'validation' => 'new value',
+])
+
 @jstrans([
     'foo' => trans('bar'),
     'fooo' => 'baaar',
 ])
-```
-
-And use it in your javascript:
-
-```javascript
-var foo = jstrans('foo'); // The value will be 'bar'
-var fooo = jstrans('fooo'); // The value will be 'baaar'
 ```
