@@ -49,7 +49,7 @@ Include this blade directive in your blade template before your javascript files
 And use it in your javascript like Laravel's `trans()` function:
 
 ```javascript
-var foo = jstrans('validation'); // The value will be 'bar'
+var foo = jstrans('validation'); // Will print whole `validation.php` array
 ```
 
 Additional you can specify multiple custom values and overwrite localization files:
