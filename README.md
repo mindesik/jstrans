@@ -18,7 +18,7 @@ Add `JSTransServiceProvider` to your `config/app.php`:
 // ...
 
 'providers' => [
-    'MisterPaladin\JSTrans\JSTransServiceProvider',
+    MisterPaladin\JSTrans\JSTransServiceProvider::class,
 ],
 ```
 
