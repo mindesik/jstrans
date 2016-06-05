@@ -1,8 +1,10 @@
 <?php
 
 Route::get('/js/jstrans.js', function () {
-    foreach (\Config::get('jstrans') as $lang) {
-        $trans[$lang] = Lang::get($lang);
+    $trans = [];
+    
+    foreach (\Config::get('jstrans') as $file) {
+        $trans[$file] = Lang::get($file);
     }
     
     $json = json_encode($trans);
