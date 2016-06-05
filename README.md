@@ -32,7 +32,7 @@ $ php artisan vendor:publish --tag=jstrans
 
 ## Usage
 
-Edit `config/jstrans.php`, add some translations to load:
+Edit `config/jstrans.php`, add translations you wish to use in javascript:
 
 ```php
 return [
