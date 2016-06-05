@@ -1,5 +1,7 @@
 # JSTrans
 
+[![Latest Stable Version](https://poser.pugx.org/misterpaladin/jstrans/v/stable)](https://packagist.org/packages/misterpaladin/jstrans) [![Total Downloads](https://poser.pugx.org/misterpaladin/jstrans/downloads)](https://packagist.org/packages/misterpaladin/jstrans) [![Latest Unstable Version](https://poser.pugx.org/misterpaladin/jstrans/v/unstable)](https://packagist.org/packages/misterpaladin/jstrans) [![License](https://poser.pugx.org/misterpaladin/jstrans/license)](https://packagist.org/packages/misterpaladin/jstrans)
+
 Use Laravel translations in javascript
 
 ## Installation
