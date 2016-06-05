@@ -1,4 +1,8 @@
 var jstrans = function (path) {
+    if (typeof path === 'undefined') {
+        return null;
+    }
+    
     if (selector = document.querySelector('input[name=\"jstrans-value-for-' + path + '\"]')) {
         return selector.value;
     } else {
