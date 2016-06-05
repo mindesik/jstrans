@@ -49,14 +49,14 @@ Include this script in your views before your javascript files:
 And use it in your javascript like Laravel's `trans()` function:
 
 ```javascript
-var foo = jstrans('validation'); // Will return whole 'validation.php' array
-var bar = jstrans('validation.accepted'); // Will return 'The :attribute must be accepted.'
-var baz = jstrans('validation.foo.bar'); // Will return 'validation.foo.bar'
+var validation = jstrans('validation'); // Will return whole 'validation.php' array
+var accepted = jstrans('validation.accepted'); // Will return 'The :attribute must be accepted.'
+var bar = jstrans('validation.foo.bar'); // Will return 'validation.foo.bar'
 ```
 
 ## Custom values
 
-Additional you may specify custom values and overwrite localization files:
+You may specify additional values to overwrite localization files:
 
 ```php
 @jstrans([
@@ -67,4 +67,8 @@ Additional you may specify custom values and overwrite localization files:
     'foo' => trans('bar'),
     'fooo' => 'baaar',
 ])
+```
+
+```javascript
+var validation = jstrans('validation'); // Will return whole 'new value', instead of 'validation.php' array
 ```
