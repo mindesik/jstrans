@@ -22,23 +22,11 @@ class JSTransServiceProvider extends ServiceProvider
             __DIR__ . '/../config.php' => config_path('jstrans.php'),
         ], 'jstrans');
         
-        Blade::directive('jstrans', function ($expression) use (&$trans) {
-            $trans = [];
-            
-            foreach (\Config::get('jstrans') as $lang) {
-                $trans[$lang] = Lang::get($lang);
-            }
-            
-            $trans = json_encode($trans);
-            
-            return "<?php echo '<textarea name=\"jstrans\" disabled readonly>{$trans}</textarea><script src=\"/js/jstrans.js\" type=\"text/javascript\"></script>'; ?>";
-        });
-        
-        Blade::directive('jstransval', function ($expression) {
+        Blade::directive('jstrans', function ($expression) {
             return '<?php
                 $exp = ' . $expression . ';
                 foreach ($exp as $key => $value) {
-                    echo "<input type=\"text\" disabled=\"disabled\" name=\"jstrans-$key\" value=\"$value\" />";
+                    echo "<input type=\"hidden\" disabled=\"disabled\" name=\"jstrans-value-for-$key\" value=\"$value\" />";
                 }
             ?>';
         });
