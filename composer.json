@@ -1,6 +1,6 @@
 {
     "name": "misterpaladin/jstrans",
-	"license": "ISC",
+	"license": "MIT",
 	"description" : "Use Laravel translations in javascript",
     "authors": [
         {
