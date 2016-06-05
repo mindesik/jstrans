@@ -6,9 +6,8 @@ var jstrans = function (path) {
     if (selector = document.querySelector('input[name=\"jstrans-value-for-' + path + '\"]')) {
         return selector.value;
     } else {
-        var json = JSON.parse('%s');
+        var json = %s;
         var keys = path.split('.');
-        
         var value = json;
         
         for (var i in keys) {
