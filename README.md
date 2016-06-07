@@ -4,6 +4,9 @@
 
 Use Laravel translations in javascript
 
+Other languages:
+- [Russian](../master/README-RU.md)
+
 ## Installation
 
 Install package:
