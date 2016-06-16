@@ -46,7 +46,7 @@ return [
 Include this script in your views before your javascript files:
 
 ```html
-<script src="/js/jstrans.js" type="text/javascript"></script>
+<script src="/vendor/misterpaladin/jstrans/js/jstrans.js" type="text/javascript"></script>
 ```
 
 And use it in your javascript like Laravel's `trans()` function:

@@ -1,6 +1,6 @@
 <?php
 
-Route::get('/js/jstrans.js', function () {
+Route::get('/vendor/misterpaladin/jstrans/js/jstrans.js', function () {
     $trans = [];
     
     foreach (\Config::get('jstrans') as $file) {

@@ -42,7 +42,7 @@ return [
 Подключите этот кусок кода ДО ваших javascript файлов:
 
 ```html
-<script src="/js/jstrans.js" type="text/javascript"></script>
+<script src="/vendor/misterpaladin/jstrans/js/jstrans.js" type="text/javascript"></script>
 ```
 
 Используйте функцию `trans()` в javascript как в Laravel:
