@@ -75,3 +75,6 @@ You may specify additional values to overwrite localization files:
 ```javascript
 var validation = jstrans('validation'); // Will return 'new value', instead of 'validation.php' array
 ```
+
+## To do
+- Pass array with arguments to replace variables
