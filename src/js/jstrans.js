@@ -1,4 +1,11 @@
-var jstrans = function (path) {
+/**
+ * Retrieve language line
+ * 
+ * @param  {string} path
+ * @param  {object} parameters
+ * @return {string}
+ */
+var jstrans = function (path, parameters) {
     if (typeof path === 'undefined') {
         return null;
     }
@@ -16,6 +23,13 @@ var jstrans = function (path) {
                 return path;
             }
             value = value[key];
+        }
+        
+        if (typeof value === 'string' && parameters) {
+            for (var i in parameters) {
+                var r = new RegExp(':' + i, 'g');
+                value = value.replace(r, parameters[i]);
+            }
         }
         
         return value;
