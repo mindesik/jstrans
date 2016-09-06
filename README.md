@@ -52,9 +52,10 @@ Include this script in your views before your javascript files:
 And use it in your javascript like Laravel's `trans()` function:
 
 ```javascript
-var validation = jstrans('validation'); // Will return whole 'validation.php' array
-var accepted = jstrans('validation.accepted'); // Will return 'The :attribute must be accepted.'
-var bar = jstrans('validation.foo.bar'); // Will return 'validation.foo.bar'
+jstrans('validation'); // Will return whole 'validation.php' array
+jstrans('validation.accepted'); // Will return 'The :attribute must be accepted.'
+jstrans('validation.foo.bar'); // Will return 'validation.foo.bar'
+jstrans('validation.accepted', {attribute: 'Test'}); // Will return 'The Test must be accepted.'
 ```
 
 ## Custom values

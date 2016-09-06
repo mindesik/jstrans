@@ -48,9 +48,10 @@ return [
 Используйте функцию `trans()` в javascript как в Laravel:
 
 ```javascript
-var validation = jstrans('validation'); // Вернет весь массив из 'validation.php'
-var accepted = jstrans('validation.accepted'); // Вернет 'The :attribute must be accepted.'
-var bar = jstrans('validation.foo.bar'); // Вернет 'validation.foo.bar'
+jstrans('validation'); // Вернет весь массив из 'validation.php'
+jstrans('validation.accepted'); // Вернет 'The :attribute must be accepted.'
+jstrans('validation.foo.bar'); // Вернет 'validation.foo.bar'
+jstrans('validation.accepted', {attribute: 'Test'}); // Вернет 'The Test must be accepted.'
 ```
 
 ## Пользовательские значения
