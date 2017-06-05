@@ -3,8 +3,12 @@
 Route::get('/vendor/misterpaladin/jstrans/js/jstrans.js', function () {
     $trans = [];
     
-    foreach (\Config::get('jstrans') as $file) {
-        $trans[$file] = Lang::get($file);
+    $config = \Config::get('jstrans');
+
+    if (count($config) > 0) {
+        foreach (\Config::get('jstrans') as $file) {
+            $trans[$file] = Lang::get($file);
+        }
     }
     
     $json = json_encode($trans);
